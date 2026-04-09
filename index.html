@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Workout Program Generator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="card">
+        <h1>Workout Program Generator</h1>
+        <p class="subtitle">Create a simple weekly plan in seconds.</p>
+
+        <form id="workout-form" class="form-grid">
+          <label>
+            Fitness goal
+            <select id="goal" required>
+              <option value="strength">Strength</option>
+              <option value="weight loss">Weight loss</option>
+              <option value="general fitness">General fitness</option>
+            </select>
+          </label>
+
+          <label>
+            Experience level
+            <select id="experience" required>
+              <option value="beginner">Beginner</option>
+              <option value="intermediate">Intermediate</option>
+            </select>
+          </label>
+
+          <label>
+            Days per week available
+            <select id="days" required>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </label>
+
+          <label>
+            Equipment available
+            <select id="equipment" required>
+              <option value="home">Home (bodyweight/minimal)</option>
+              <option value="dumbbells">Dumbbells</option>
+              <option value="full gym">Full gym</option>
+            </select>
+          </label>
+
+          <button type="submit">Generate Plan</button>
+        </form>
+      </section>
+
+      <section id="result" class="card hidden" aria-live="polite"></section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
